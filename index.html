@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulir Pendaftaran Ekstrakurikuler</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Formulir Pendaftaran</h1>
+        <p class="subtitle">Pendaftaran Ekstrakurikuler Sekolah</p>
+        
+
+        <form id="formulir">
+
+            <!-- Nama Lengkap -->
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama"
+                   placeholder="Masukkan nama lengkap" required>
+            <br><br>
+
+            <!-- NIS -->
+            <label for="nis">NIS:</label><br>
+            <input type="text" id="nis" name="nis"
+                   placeholder="Masukkan NIS" required>
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Masukkan email" required>
+            <br><br>
+
+            <!-- Jenis Kelamin -->
+            <label>Jenis Kelamin:</label><br>
+
+            <input type="radio" id="laki"
+                   name="jenis_kelamin" value="Laki-laki" required>
+            <label for="laki">Laki-laki</label>
+
+            <input type="radio" id="perempuan"
+                   name="jenis_kelamin" value="Perempuan">
+            <label for="perempuan">Perempuan</label>
+
+            <br><br>
+
+            <!-- Ekstrakurikuler -->
+            <label>Ekstrakurikuler:</label><br>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="Paskibra">
+            <label>Paskibra</label>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="Jurnalistik">
+            <label>Jurnalistik</label>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="Rohis">
+            <label>Rohis</label>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="Pramuka">
+            <label>Pramuka</label>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="Tari">
+            <label>Tari</label>
+
+            <input type="checkbox" name="ekstrakulikuler"
+                   value="PIK-R">
+            <label>PIK-R</label>
+
+            <br><br>
+
+            <!-- Kelas -->
+            <label>Kelas:</label><br>
+
+            <input type="radio" name="kelas" value="X" required>
+            <label>X</label>
+
+            <input type="radio" name="kelas" value="XI">
+            <label>XI</label>
+
+            <input type="radio" name="kelas" value="XII">
+            <label>XII</label>
+
+            <br><br>
+            <hr>
+
+            <!-- Jurusan -->
+            <label for="jurusan">JURUSAN:</label><br>
+
+            <select id="jurusan" name="jurusan" required>
+                <option value="">-- Pilih Jurusan --</option>
+
+                <option value="REKAYASA PERANGKAT LUNAK">
+                    REKAYASA PERANGKAT LUNAK
+                </option>
+
+                <option value="GEOLOGI PERTAMBANGAN">
+                    GEOLOGI PERTAMBANGAN
+                </option>
+
+                <option value="AKUNTANSI DAN KEUANGAN LEMBAGA">
+                    AKUNTANSI DAN KEUANGAN LEMBAGA
+                </option>
+
+                <option value="ANALISIS PENGUJIAN LABORATORIUM">
+                    ANALISIS PENGUJIAN LABORATORIUM
+                </option>
+            </select>
+
+            <br><br>
+
+            <!-- Pesan -->
+            <label for="pesan">Pesan / Catatan:</label><br>
+
+            <textarea id="pesan" name="pesan"
+                      rows="4" cols="40"
+                      placeholder="Tulis pesan kamu..."></textarea>
+
+            <br><br>
+
+            <!-- Tombol -->
+            <button type="submit">Kirim Formulir</button>
+            <button type="reset" class="reset">Reset</button>
+
+        </form>
+
+        <hr>
+
+        <!-- Hasil -->
+        <div id="hasil"></div>
+        <div id="tombolCetak" style="display: none; text-align: center; margin-top: 20px;">
+    <button type="button" onclick="cetakPDF()">
+        Cetak Formulir / Simpan PDF
+    </button>
+
+    </div>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
